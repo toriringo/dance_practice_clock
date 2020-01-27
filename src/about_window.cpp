@@ -52,7 +52,8 @@ ABOUT::DancePracticeClockTab::DancePracticeClockTab(QWidget *parent) :
 		"Version 20200124-21\n\n"
 
 		"Copyright 2020 TORIUMI Mitsugu and contributors. License GPLv3: GNU GPL version 3.\n"
-		"This is free software; see the source for copying conditions. There is NO warranty;\n"			"not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n\n"
+		"This is free software; see the source for copying conditions. There is NO warranty;\n"
+		"not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n\n"
 
 		"Dance Practice Clock is Open Source Software released under the GNU General Public License.\n"
 	);
