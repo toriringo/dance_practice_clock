@@ -4,8 +4,8 @@
 #include <QAction>
 #include <QMainWindow>
 #include <QMenu>
-#include <QSettings>
 #include <QMenuBar>
+#include <QSettings>
 #include <QWidget>
 
 namespace CORE
