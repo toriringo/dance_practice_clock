@@ -15,7 +15,8 @@ namespace IMAGE
 		std::array<QImage, CORE::MainWindow::ShortHandInterval> m_secHandImage;
 	};
 
-	extern const Image image;
+	extern const Image *image;
+	void initImage();
 }
 
 #endif

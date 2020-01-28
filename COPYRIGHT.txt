@@ -1,0 +1,4 @@
+Dance Practice Clock, The Git GUI Client
+Copyright (C) 2020 TORIUMI Mitsugu
+repository: https://github.com/toriringo
+mail: toriringo@gmail.com

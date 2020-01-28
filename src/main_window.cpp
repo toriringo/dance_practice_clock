@@ -24,6 +24,8 @@ CORE::MainWindow::MainWindow(QMainWindow *parent) :
 	setWindowTitle(tr("Dance Practice Clock"));
 	setStyleSheet(m_backGroundColors[m_backGroundColor]);
 
+	IMAGE::initImage();
+
 	createActions();
 	createMenu();
 #ifndef QT_DEBUG
@@ -166,71 +168,71 @@ void CORE::MainWindow::paintEvent(QPaintEvent *)
 	if (static_cast<int>(time.hour()) % LongHandInterval == 0) {
 		painter.drawImage(QRect((HandStartPosX - 7) + time.hour() * 10,
 							HourScalePosY - 30, HandWidth, HandHeight),
-							IMAGE::image.m_hourHandImage[0]);
+							IMAGE::image->m_hourHandImage[0]);
 	}
 	else if (static_cast<int>(time.hour() - 1.0) % LongHandInterval == 0) {
 		painter.drawImage(QRect((HandStartPosX - 7) + time.hour() * 10,
 							HourScalePosY - 25, HandWidth, HandHeight),
-							IMAGE::image.m_hourHandImage[1]);
+							IMAGE::image->m_hourHandImage[1]);
 	}
 	else if (static_cast<int>(time.hour() - 2.0) % LongHandInterval == 0) {
 		painter.drawImage(QRect((HandStartPosX - 7) + time.hour() * 10,
 							HourScalePosY - 25, HandWidth, HandHeight),
-							IMAGE::image.m_hourHandImage[2]);
+							IMAGE::image->m_hourHandImage[2]);
 	}
 
 	// 分針
 	if (static_cast<int>(time.minute()) % ShortHandInterval == 0) {
 		painter.drawImage(QRect(HandStartPosX + time.minute() * 4,
 							MinScalePosY - 25, HandWidth, HandHeight),
-							IMAGE::image.m_minHandImage[0]);
+							IMAGE::image->m_minHandImage[0]);
 	}
 	else if (static_cast<int>(time.minute() - 1.0) % ShortHandInterval == 0) {
 		painter.drawImage(QRect(HandStartPosX + time.minute() * 4,
 							MinScalePosY - 25, HandWidth, HandHeight),
-							IMAGE::image.m_minHandImage[1]);
+							IMAGE::image->m_minHandImage[1]);
 	}
 	else if (static_cast<int>(time.minute() - 2.0) % ShortHandInterval == 0) {
 		painter.drawImage(QRect(HandStartPosX + time.minute() * 4,
 							MinScalePosY - 27, HandWidth, HandHeight),
-							IMAGE::image.m_minHandImage[2]);
+							IMAGE::image->m_minHandImage[2]);
 	}
 	else if (static_cast<int>(time.minute() - 3.0) % ShortHandInterval == 0) {
 		painter.drawImage(QRect(HandStartPosX + time.minute() * 4,
 							MinScalePosY - 30, HandWidth, HandHeight),
-							IMAGE::image.m_minHandImage[3]);
+							IMAGE::image->m_minHandImage[3]);
 	}
 	else if (static_cast<int>(time.minute() - 4.0) % ShortHandInterval == 0) {
 		painter.drawImage(QRect(HandStartPosX + time.minute() * 4,
 							MinScalePosY - 30, HandWidth, HandHeight),
-							IMAGE::image.m_minHandImage[4]);
+							IMAGE::image->m_minHandImage[4]);
 	}
 
 	// 秒針
 	if (static_cast<int>(time.second()) % ShortHandInterval == 0) {
 		painter.drawImage(QRect(HandStartPosX + time.second() * 4,
 							SecScalePosY - 24, HandWidth, HandHeight),
-							IMAGE::image.m_secHandImage[0]);
+							IMAGE::image->m_secHandImage[0]);
 	}
 	else if (static_cast<int>(time.second() - 1.0) % ShortHandInterval == 0) {
 		painter.drawImage(QRect(HandStartPosX + time.second() * 4,
 							SecScalePosY - 25, HandWidth, HandHeight),
-							IMAGE::image.m_secHandImage[1]);
+							IMAGE::image->m_secHandImage[1]);
 	}
 	else if (static_cast<int>(time.second() - 2.0) % ShortHandInterval == 0) {
 		painter.drawImage(QRect(HandStartPosX + time.second() * 4,
 							SecScalePosY - 27, HandWidth, HandHeight),
-							IMAGE::image.m_secHandImage[2]);
+							IMAGE::image->m_secHandImage[2]);
 	}
 	else if (static_cast<int>(time.second() - 3.0) % ShortHandInterval == 0) {
 		painter.drawImage(QRect(HandStartPosX + time.second() * 4,
 							SecScalePosY - 30, HandWidth, HandHeight),
-							IMAGE::image.m_secHandImage[3]);
+							IMAGE::image->m_secHandImage[3]);
 	}
 	else if (static_cast<int>(time.second() - 4.0) % ShortHandInterval == 0) {
 		painter.drawImage(QRect(HandStartPosX + time.second() * 4,
 							SecScalePosY - 30, HandWidth, HandHeight),
-							IMAGE::image.m_secHandImage[4]);
+							IMAGE::image->m_secHandImage[4]);
 	}
 }
 

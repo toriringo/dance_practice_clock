@@ -42,9 +42,9 @@ ABOUT::DancePracticeClockTab::DancePracticeClockTab(QWidget *parent) :
 	m_appImageLabel->setAlignment(Qt::AlignHCenter | Qt::AlignTop);
 	m_appImageLabel->setMargin(10);
 
-	QPixmap *appImagePimap =
-		new QPixmap(QPixmap::fromImage(IMAGE::image.m_hourHandImage[0]));
-	m_appImageLabel->setPixmap(*appImagePimap);
+	QPixmap *appImagePixmap =
+		new QPixmap(QPixmap::fromImage(IMAGE::image->m_hourHandImage[0]));
+	m_appImageLabel->setPixmap(*appImagePixmap);
 
 	QString description(
 		"Dance Practice Clock\n\n"
@@ -71,7 +71,9 @@ ABOUT::DancePracticeClockTab::DancePracticeClockTab(QWidget *parent) :
 ABOUT::DeveloperTab::DeveloperTab(QWidget *parent) :
 	QWidget(parent)
 {
-	QString auther("TORIUMI Mitsugu  <toriringo@gmail.com>");
+	QString auther(
+		"TORIUMI Mitsugu  <toriringo@gmail.com>\n"
+	);
 
 	m_developerPlainTextEdit = new QPlainTextEdit(auther);
 //	m_developerPlainTextEdit->setAlignment(Qt::AlignHCenter | Qt::AlignTop);

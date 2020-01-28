@@ -2,7 +2,12 @@
 
 namespace IMAGE
 {
-	const Image image;
+	const Image *image;
+
+	void initImage()
+	{
+		image = new Image();
+	}
 }
 
 IMAGE::Image::Image()
