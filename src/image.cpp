@@ -6,7 +6,9 @@ namespace IMAGE
 
 	void initImage()
 	{
-		image = new Image();
+		if (! image) {
+			image = new Image();
+		}
 	}
 }
 
