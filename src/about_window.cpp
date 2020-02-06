@@ -54,9 +54,18 @@ ABOUT::DancePracticeClockTab::DancePracticeClockTab(QWidget *parent) :
 		"Copyright 2020 TORIUMI Mitsugu and contributors. License GPLv3: GNU GPL version 3.\n"
 		"This is free software; see the source for copying conditions. There is NO warranty;\n"
 		"not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n\n"
-
-		"Dance Practice Clock is Open Source Software released under the GNU General Public License.\n"
 	);
+	description += QString("Compiled with Qt %1").arg(qVersion());
+	#if defined(_MSC_VER)
+	description += QString(", with msvc %1").arg(_MSC_VER);
+	#elif defined(__clang__)
+	description += QString(", with clang %1.%2").arg(__clang_major__).arg(__clang_minor__);
+	#elif defined(__GNUC__)
+	description += QString(", with gcc %1.%2.%3").arg(__GNUC__).arg(__GNUC_MINOR__).arg(__GNUC_PATCHLEVEL__);
+	#endif
+	description += QString("\n\n");
+	description += QString("Dance Practice Clock is Open Source Software released under the GNU General Public License.\n");
+
 	m_descriptionLabel = new QLabel(description);
 	m_descriptionLabel->setAlignment(Qt::AlignHCenter | Qt::AlignTop);
 
